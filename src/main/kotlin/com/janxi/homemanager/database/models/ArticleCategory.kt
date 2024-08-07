@@ -10,4 +10,6 @@ class ArticleCategory(
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     val id: Long = -1,
     val name: String,
-)
+) {
+    constructor() : this(-1, "")
+}

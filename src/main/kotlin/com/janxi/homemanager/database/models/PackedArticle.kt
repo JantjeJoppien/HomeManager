@@ -1,9 +1,6 @@
 package com.janxi.homemanager.database.models
 
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
+import jakarta.persistence.*
 import org.springframework.data.annotation.Id
 import java.math.BigDecimal
 import java.util.Date
@@ -19,4 +16,9 @@ class PackedArticle(
     val price: BigDecimal?,
     @Column(name = "best_before")
     val bestBefore: Date?,
-)
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    val articleCategory: ArticleCategory,
+) {
+    constructor() : this(-1, "", 0, null, null, null, ArticleCategory())
+}
