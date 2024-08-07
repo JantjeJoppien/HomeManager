@@ -6,6 +6,9 @@ import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
+import jakarta.persistence.JoinColumn
+import jakarta.persistence.ManyToOne
+import jakarta.persistence.OneToOne
 import java.math.BigDecimal
 import java.util.*
 
@@ -21,5 +24,7 @@ class FreshArticle(
     @Column(name = "bought_on")
     val boughtOn: Date,
     val origin: String,
-    val category: String,
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    val articleCategory: ArticleCategory,
 )
