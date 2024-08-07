@@ -1,14 +1,13 @@
 package com.janxi.homemanager.database.models
 
 import jakarta.persistence.*
-import org.springframework.data.annotation.Id
 import java.math.BigDecimal
 import java.util.Date
 
 @Entity
 class PackedArticle(
-    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
     val id: Long = -1,
     val name: String,
     val amount: Int,
