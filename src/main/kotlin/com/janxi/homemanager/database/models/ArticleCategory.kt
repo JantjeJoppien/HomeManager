@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
 @Entity
-class CategoryArticle(
+class ArticleCategory(
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     val id: Long = -1,
     val name: String,
