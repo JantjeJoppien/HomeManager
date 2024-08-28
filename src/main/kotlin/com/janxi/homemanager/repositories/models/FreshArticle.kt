@@ -1,4 +1,4 @@
-package com.janxi.homemanager.database.models
+package com.janxi.homemanager.repositories.models
 
 import jakarta.persistence.CollectionTable
 import jakarta.persistence.Column
